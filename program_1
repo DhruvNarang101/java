@@ -1,0 +1,9 @@
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("\t My name is Dhruv Narang");
+		System.out.println("\t BCA Section-B");
+		System.out.println(" Northcap \t university");
+	    
+	}
+}
