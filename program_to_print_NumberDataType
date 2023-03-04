@@ -1,0 +1,18 @@
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Number data type");
+		byte mynum1 = 100;
+		System.out.println("byte"+mynum1);
+		Short mynum2 = 5000;
+		System.out.println("short"+mynum2);
+		int mynum3 = 100000;
+		System.out.println("int"+mynum3);
+		long mynum4 = 1500000l;
+		System.out.println("long"+mynum4);
+		float mynum5 = 5.75f;
+		System.out.println("float"+mynum5);
+		double mynum6 = 18.99d;
+		System.out.println("double"+mynum6);
+	}
+}
