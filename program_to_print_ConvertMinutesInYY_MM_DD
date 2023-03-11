@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner (System.in);
+        System.out.println("Enter the minutes");
+        int minute = sc.nextInt();
+        long year,month,day,remyear,remmonth;
+        year = minute/(365*24*60);
+        remyear= minute%(365*24*60);
+        month = remyear/(43800);
+        remmonth=remyear%(43800);
+        day=remmonth%(1440);
+        System.out.println(year+" year "+ month + " month "+ day + " day");
+    }
+}
