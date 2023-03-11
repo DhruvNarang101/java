@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner (System.in);
+        int i , flag=0;
+        System.out.println("Enter the size of the array");
+        int n = sc.nextInt();
+        int[] a = new int[n];
+        System.out.println("Enter the elements");
+        for( i=0;i<n;i++){
+            a[i]=sc.nextInt();
+        }
+        System.out.println("Enter the elements you find");
+        int x = sc.nextInt();
+        for(i=0;i<n;i++){
+            if(a[i]==x){
+                flag=1;
+                break;
+            }
+            else{
+                flag=0;
+            }
+        }
+        if(flag==1){
+            System.out.println("The elements you find at positin : "+ (i));
+        }
+        else{
+            System.out.println("-1");
+        }
+    }
+}
