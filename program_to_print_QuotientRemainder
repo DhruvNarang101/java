@@ -1,0 +1,15 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner (System.in);
+	    int remainder , quotient;
+	    System.out.println("Enter the divisor , divident");
+	    int divident = sc.nextInt();
+	    int divisor = sc.nextInt();
+	   quotient = divident/divisor;
+	  remainder =  divident%divisor;
+	  System.out.println("Quotient " + quotient);
+	  System.out.println("Remainder " + remainder);
+	}
+}
