@@ -1,0 +1,19 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner (System.in);
+        System.out.println("Enter the size of the array");
+        float average;
+        int size = sc.nextInt();
+        int[] myarray = new int [size];
+        int sum =0;
+        System.out.println("Enter the elements of the array");
+        for(int i=0;i<size;i++){
+            myarray[i] = sc.nextInt();
+            sum = sum + myarray[i];
+        }
+        System.out.println("sum of the elements " + sum);
+        average = (float)sum/size;
+        System.out.println("The average =" + average);
+    }
+}
