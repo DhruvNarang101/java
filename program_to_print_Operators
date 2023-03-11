@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main {
+    public static void main (String[] args){
+        Scanner sc = new Scanner (System.in);
+        System.out.println("Enter the two number");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int addition,subtraction,multiplication,modules;
+        float division;
+        addition = a+b;
+        subtraction=a-b;
+        multiplication=a*b;
+        modules=a%b;
+        division=a/b;
+        System.out.println("sum ="+ addition);
+        System.out.println("Difference ="+subtraction);
+        System.out.println("Multiply ="+multiplication);
+        System.out.println("Mod ="+modules);
+        System.out.println("divide ="+division);
+    }
+}
