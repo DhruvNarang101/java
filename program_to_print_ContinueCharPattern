@@ -1,0 +1,15 @@
+public class Main
+{
+	public static void main(String[] args) {
+		 char number = 'a';
+		for(char i='a';i<='c';i++){
+		    for(char j='a';j<=i;j++){
+		        System.out.print(number+" ");
+		        number++;
+		}
+		System.out.println();
+		}
+	}
+}
+
+
