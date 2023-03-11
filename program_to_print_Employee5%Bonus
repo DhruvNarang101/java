@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main {
+    public static void main (String[]args){
+     int year;
+     int sal;
+        System.out.println("Enter the year of service");
+        Scanner sc = new Scanner (System.in);
+        year = sc.nextInt();
+        if(year>5) {
+            System.out.println(" year of service is more than 5 year\n Enter your salary");
+            sal = sc.nextInt();
+            System.out.println("Your salary is " + sal);
+            System.out.println("Your 5% bonus is " + sal * 0.05);
+            System.out.println("Your net bonus with salary" + (sal + (sal * 0.05)));
+        }
+        else
+        {
+            System.out.println("NO BONUS");
+        }
+    }
+} 
