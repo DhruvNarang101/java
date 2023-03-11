@@ -1,0 +1,14 @@
+public class Main
+{
+	public static void main(String[] args) {
+	    char mygrade = 'A';
+	    System.out.println("single char " +mygrade);
+	    char myvar1 = 65, myvar2 = 66, myvar3 = 67; 
+	    System.out.println("char using ascii value " +myvar1);
+	    System.out.println(myvar2);
+	    System.out.println(myvar3);
+	   String greeting = " Hello World";
+	   System.out.println("string" + greeting);
+	    
+	}
+}
