@@ -1,0 +1,34 @@
+import java.util.*;
+class Box {
+    double width;
+    double height;
+    double depth;
+    
+void displayVolume(){
+    System.out.println(findVolume());
+}
+double findVolume(){
+    double v = width*height*depth;
+    return v ;
+}
+Box(){
+    width = height = depth =0;
+}
+Box(double w,double h,double d){
+    width = w;
+    height = h;
+    depth=d;
+}
+}
+class Main {
+    public static void main (String[] args){
+        Scanner sc = new Scanner (System.in);
+        System.out.println("Enter the width , height , depth ");
+        double w,h,d;
+        w = sc.nextDouble();
+        h = sc.nextDouble();
+        d = sc.nextDouble();
+        Box b = new Box(w,h,d);
+        b.displayVolume();
+    }
+}
