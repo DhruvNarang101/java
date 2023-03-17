@@ -1,0 +1,32 @@
+/ Base class
+class Animals {
+  String color;
+
+  void eat (){
+      System.out.println("Eats");
+  }
+  void breath (){
+      System.out.println("breaths");
+  }
+}
+// Derived class
+class Mammal extends Animals {
+    int legs;
+}
+// Derived class
+class Dogs extends Mammal {
+    String breeds ;
+}
+public class Main {
+    public static void main (String[] args){
+        Dogs Shanky = new Dogs ();
+        Shanky.eat();
+        Shanky.color=("white");
+        System.out.println(Shanky.color);
+        Shanky.legs=2;
+        System.out.println(Shanky.legs);
+        Shanky.breeds=("Germanshaped");
+        System.out.println(Shanky.breeds);
+    }
+
+}
