@@ -1,0 +1,27 @@
+class Student {
+    String name;
+    int age ;
+    int roll;
+
+    void setname (String newname){
+        name = newname;
+    }
+
+    void setage (int newage){
+        age = newage;
+    }
+    void setroll (int newroll){
+        roll=newroll;
+    }
+}
+public class Main {
+    public static void main (String args[]){
+        Student s1 = new Student ();
+        s1.setname("Manya Manocha");
+        System.out.println(s1.name);
+        s1.setage(19);
+        System.out.println(s1.age);
+        s1.setroll(1);
+        System.out.println(s1.roll);
+    }
+}
