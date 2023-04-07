@@ -1,0 +1,15 @@
+class BankAcc{
+    public String username;
+    private String password;
+    public void setPassword (String pwd) {
+        password = pwd;
+    }
+}
+public class BankAccount {
+    public static void main(String args[]){
+        BankAcc myAcc= new BankAcc();
+        myAcc.username="DhruvNarang";
+        myAcc.setPassword ("abcde");
+        System.out.println(myAcc.username);
+    }
+}
