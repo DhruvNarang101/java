@@ -1,0 +1,15 @@
+class Students {
+    String name;
+    int roll;
+    Students (String name,int roll) {
+        this.name = name;
+        this.roll=roll;
+    }
+}
+public class StudentCons {
+    public static void main (String args[]){
+        Students s1 = new Students ("Dhruv Narang",101);
+        System.out.println(s1.name);
+        System.out.println(s1.roll);
+    }
+}
