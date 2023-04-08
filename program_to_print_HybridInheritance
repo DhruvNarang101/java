@@ -1,0 +1,71 @@
+class Animal {
+    String color;
+    void eat(){
+        System.out.println("EATS");
+    }
+    void breath(){
+        System.out.println("BREATHES");
+    }
+}
+class Fish extends Animal {
+    int fins;
+
+    void swim() {
+        System.out.println("SWIMS");
+    }
+}
+class Bird extends Animal {
+    void fly(){
+        System.out.println("FLYS");
+    }
+}
+class Mammal extends Animal{
+    void legs(){
+        System.out.println("LEGSS");
+    }
+}
+class Tuna extends Fish{
+    void small(){
+        System.out.println("SMALLEST");
+    }
+}
+class Shark extends Fish{
+    void large(){
+        System.out.println("LARGEST");
+    }
+}
+class Peacock extends Bird{
+    void feathers(){
+        System.out.println("FEATHERS");
+    }
+}
+class Dog extends Mammal{
+    void breed(){
+        System.out.println("GERMAN");
+    }
+}
+class Cat extends Mammal{
+    void meow(){
+        System.out.println("MEOWS");
+    }
+}
+class Human extends Mammal{
+    void talk(){
+        System.out.println("TALKS");
+    }
+}
+public class HybridInheritance {
+    public static void main (String args[]){
+        Human hu = new Human();
+        hu.color=("White");
+        System.out.println(hu.color);
+        hu.talk();
+        hu.legs();
+        Peacock pe = new Peacock();
+        pe.fly();
+        pe.feathers();
+        Shark sh = new Shark();
+        sh.swim();
+        sh.large();
+    }
+    }
