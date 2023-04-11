@@ -1,0 +1,17 @@
+//Method overriding
+class Animal {
+    void eat (){
+        System.out.println("Eat Anything");
+    }
+}
+class Deer extends Animal{
+    void eat(){
+        System.out.println("Eat Grass");
+    }
+}
+public class Main {
+    public static void main (String args[]){
+        Deer D = new Deer();
+        D.eat();
+    }
+}
