@@ -1,0 +1,63 @@
+import java.util.*;
+class Box {
+    float width,height,depth ;
+    Box(float w,float h, float d){
+        width = w;
+        height = h;
+        depth = d;
+    }
+    void setwidth(float w){
+        width = w;
+    }
+    void setheight(float h){
+        height = h;
+    }
+    void setdepth(float d){
+        depth = d;
+    }
+    float getwidth(){
+        return width;
+    }
+    float getheight(){
+        return height;
+    }
+    float getdepth(){
+        return depth;
+    }
+    void displayVolume(){
+        System.out.println("Volume of Box = " + width*height*depth);
+    }
+
+}
+class BoxWeight extends Box {
+    float weight;
+    BoxWeight(float w,float h,float d,float wt){
+        super (w,h,d);
+        weight = wt;
+    }
+    void setweight(float wt){
+        weight = wt;
+    }
+     float getweight(){
+        return weight;
+    }
+    void displayWeight(){
+        System.out.println("Weight of box = "+ weight);
+    }
+}
+public class BoxWeightDemo {
+    public static void main (String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the width");
+        float width = sc.nextFloat();
+        System.out.println("Enter the height");
+        float height = sc.nextFloat();
+        System.out.println("Enter the depth");
+        float depth = sc.nextFloat();
+        System.out.println("Enter the weight");
+        float weight = sc.nextFloat();
+        BoxWeight bw = new BoxWeight(width,height,depth,weight);
+        bw.displayVolume();
+        bw.displayWeight();
+    }
+}
