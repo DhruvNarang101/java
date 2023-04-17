@@ -1,0 +1,21 @@
+interface Herbivores {
+     void eat ();
+}
+interface Omnivores {
+   void eats ();
+}
+class Bear implements Herbivores,Omnivores {
+    public void eat(){
+        System.out.println("grass");
+    }
+   public void eats(){
+        System.out.println("Chicken");
+    }
+}
+public class Main {
+    public static void main (String args[]){
+        Bear b = new Bear ();
+        b.eat();
+        b.eats();
+    }
+}
