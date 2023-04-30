@@ -1,0 +1,17 @@
+package packageDemo;
+public class Pack {
+    public void display(){
+        System.out.println("This is my package");
+    }
+    public static void main (String args[]){
+        Pack obj = new Pack();
+        obj.display();
+    }
+}
+import packageDemo.Pack;
+public class MyPack{
+    public static void main(String args[]){
+        Pack obj = new Pack();
+        obj.display();
+    }
+}
