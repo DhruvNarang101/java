@@ -1,0 +1,14 @@
+import java.io.PrintWriter;
+import java.io.IOException;
+
+public class WriterUsingPrintWriter{
+    public static void main (String args[]) throws IOException{
+        //open the file 
+        PrintWriter out = new PrintWriter("ocean.txt");
+        // Write the name of the ocean to the file
+        out.println("Atlantic");
+        out.println("Pacific");
+        out.println("Indian");
+        out.close();
+    }
+}
