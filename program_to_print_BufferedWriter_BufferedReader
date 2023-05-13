@@ -1,0 +1,48 @@
+//Write a program that writes an Serial No.(int), First Name (String),
+//CGPA (float) and Grade(char) into a text file using bufferedWriter
+//and displays the contents using bufferedReader.
+
+import java.io.*;
+import java.util.*;
+import java.lang.Exception;
+public class PPT{
+public static void main(String args[])throws Exception{
+writeFile();
+readFile();
+}
+static void writeFile() {
+try{
+File ff = new File("File.txt");
+FileWriter f = new FileWriter(ff);
+BufferedWriter bw = new BufferedWriter(f);
+Scanner sc = new Scanner(System.in);
+
+System.out.println("Enter the serial number");
+int i = sc.nextInt();
+System.out.println("Enter the name");
+String name = sc.next();
+System.out.println("Enter the CGPA");
+Float cgpa = sc.nextFloat();
+System.out.println("Enter the Grade");
+char ch = sc.next().charAt(0);
+
+bw.write(Integer.toString(i)+"\t"+name+"\t"+Float.toString(cgpa)+"\t"+ch);
+
+bw.close();
+f.close();
+}
+catch(Exception e){
+System.out.println("File not found");
+}
+}
+static void readFile() throws Exception {
+FileReader fr = new FileReader("file.txt");
+BufferedReader br = new BufferedReader(fr);
+int j;
+while((j=br.read())!=-1){
+System.out.print((char)j);
+}
+br.close();
+fr.close();
+}
+}
