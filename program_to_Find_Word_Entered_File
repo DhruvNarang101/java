@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+public class TTT {
+    public static void main(String args[]) throws Exception {        
+boolean flag = true;
+        File f = new File ("File.txt");
+        FileReader fr = new FileReader(f);
+        BufferedReader br = new BufferedReader(fr);
+        String s ;
+       while((s=br.readLine())!=null && flag){
+            if(s.equals("me"))
+                System.out.println("Present");
+            flag = false;
+            br.close();
+            fr.close();
+        }
+ }
+}
