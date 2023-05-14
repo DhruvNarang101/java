@@ -1,0 +1,10 @@
+import java.io.*;
+public class Exist {
+public static void main (String args[]){
+File f = new File("file.txt");
+if(f.exists())
+System.out.println("File exists");
+else
+System.out.println("File Does not Exists");
+}
+}
