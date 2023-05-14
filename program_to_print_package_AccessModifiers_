@@ -1,0 +1,20 @@
+package Codewithdhruv;
+class dhruvgym{
+public int a = 5;
+protected int b = 6;
+int c = 7;
+private int d = 8;
+void display(){
+System.out.println(a);
+System.out.println(b);
+System.out.println(c);
+System.out.println(d);
+}
+public static void main(String args[]){
+dhruvgym G = new dhruvgym();
+System.out.println(G.a);
+System.out.println(G.b);
+System.out.println(G.c);
+}
+}
+//Private Access Modifiers not access outside the class.
