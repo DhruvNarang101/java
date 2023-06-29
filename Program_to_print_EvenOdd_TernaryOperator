@@ -1,0 +1,7 @@
+public class TernaryOperator{
+    public static void main(String args[]){
+        int number = 5;
+        String Type = (5%2==0)?"Even":"odd";
+        System.out.println(Type);
+    }
+}
