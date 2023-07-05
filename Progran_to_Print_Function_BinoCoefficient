@@ -1,0 +1,19 @@
+public class FunBinoCoefficient{
+    public static int Factorial(int n){
+        int fact = 1;
+        for(int i = 1; i<=n; i++){
+            fact = fact*i;
+        }
+        return fact;
+    }
+    public static int BinoCoefficient(int n , int r){
+        int n_fact=Factorial(n);
+        int r_fact=Factorial(r);
+        int nmr_fact=Factorial(n-r);
+        int BinoCoefficient = n_fact / (r_fact*nmr_fact);
+        return BinoCoefficient;
+    }
+    public static void main (String args[]){
+        System.out.println(BinoCoefficient(5,2));
+}
+}
