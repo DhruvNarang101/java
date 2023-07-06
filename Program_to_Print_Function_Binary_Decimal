@@ -1,0 +1,17 @@
+public class BinToDecimal{
+    public static void BinToDec(int BinNum){
+        int pow = 0;
+        int decimal = 0;
+        int myNum = BinNum;
+        while(BinNum>0){
+            int lastdigit = BinNum % 10;
+            decimal = decimal + lastdigit*(int)Math.pow(2,pow);
+            BinNum = BinNum / 10;
+            pow++;
+        }
+        System.out.println("Decimal number of "+ myNum + " = "+ decimal );
+    }
+    public static void main (String args[]){
+        BinToDec(101);
+    }
+}
