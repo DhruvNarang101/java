@@ -1,0 +1,17 @@
+import java.util.*;
+public class FunPalindrome{
+    public static void Palindrome (int n){
+        // Number is Palindrome the reverse of number is same as the given number
+        while(n>0){
+            int lastdigit = n%10;
+            System.out.print(lastdigit);
+            n=n/10;
+        }
+    }
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int n = sc.nextInt();
+        Palindrome(n);
+    }
+}
