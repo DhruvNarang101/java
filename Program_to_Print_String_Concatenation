@@ -1,0 +1,9 @@
+public class StringConcatenation { // Concatenation is join the multiple String in a Single String 
+    public static void main (String args[]){
+        String name = "Dhruv";
+        String Lstname = "Narang";
+        String Fullname = name + " "+  Lstname; //Concatenation
+        System.out.println(Fullname);          
+        System.out.println(Fullname.length()); //Length
+    }
+}
