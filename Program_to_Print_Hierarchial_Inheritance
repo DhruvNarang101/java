@@ -1,0 +1,41 @@
+public class HierarchialInheritance {
+    public static void main (String args[]){
+        Dog dobby = new Dog();
+        dobby.skincolor = "White";
+        System.out.println(dobby.skincolor);
+        dobby.eat();
+        Mammal m = new Mammal();
+        m.skincolor="brown";
+        System.out.println(m.skincolor);
+        m.walk();
+    }
+}
+class Animals {
+    String skincolor;
+    
+    void eat(){
+        System.out.println("EAtS");
+    }
+    void breadth(){
+        System.out.println("BREADTHES");
+    }
+}
+class Dog extends Animals {
+    String breed;
+
+    void run(){
+        System.out.println("RUNS");
+    }
+}
+class Fish extends Animals {
+    int fins ;
+
+    void swim(){
+        System.out.println("SWIMS");
+    }
+}
+class Mammal extends Animals {
+    void walk(){
+        System.out.println("WALKS");
+    }
+}
