@@ -1,0 +1,21 @@
+public class MultipleInheritance {
+    public static void main(String args[]){
+        Beer b = new Beer();
+        b.eat();
+        b.size();
+    }
+}
+interface Herbivores {
+    void eat();
+}
+interface Carnivores {
+    void size();
+}
+class Beer implements Herbivores , Carnivores {
+    public void eat(){
+        System.out.println("eat Grass");
+    }
+    public void size(){
+        System.out.println("Big");
+    }
+}
