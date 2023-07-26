@@ -1,0 +1,14 @@
+public class RecursionIncTwo {
+    public static void IncreaseOrder(int n){
+        if(n==1){
+            System.out.print(n+" ");
+            return;
+        }
+        IncreaseOrder(n-1);
+        System.out.print(n+" ");
+    }
+    public static void main (String args[]){
+        int n = 5;
+        IncreaseOrder(n);
+    }
+}
