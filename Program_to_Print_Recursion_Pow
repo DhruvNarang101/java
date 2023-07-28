@@ -1,0 +1,19 @@
+public class RecursionOptimisedPow{
+    public static int Pow(int a , int n){
+        if(n==0){
+            return 1;
+        }
+        int halfpow = Pow(a,n/2);
+       int halfpowsquare= halfpow*halfpow;
+       // odd 
+       if(n%2!=0){
+        halfpowsquare = a * halfpowsquare;
+       }
+       return halfpowsquare;
+    }
+    public static void main (String args[]){
+        int a = 2;
+        int n = 5;
+        System.out.println(Pow(a,n));
+    }
+}
