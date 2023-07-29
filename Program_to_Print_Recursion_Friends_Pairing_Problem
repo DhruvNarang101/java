@@ -1,0 +1,18 @@
+public class RecursionFriendPairing {
+    public static int FriendsPairing(int n){
+        if(n==1||n==2){
+            return n;
+        }
+        //Kaam
+        //single
+        int fnm1 = FriendsPairing(n-1);
+
+        // Pairing
+        int fnm2 = FriendsPairing(n-2);
+        int totalways = fnm1 + (n-1)*fnm2;
+        return totalways;
+    }
+    public static void main (String args[]){
+System.out.println(FriendsPairing(4));
+    }
+}
