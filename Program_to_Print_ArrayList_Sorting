@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+import java.util.Collections;
+public class ArrayListSort {
+    public static void main (String args[]){
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(5);
+        list.add(10);
+        list.add(2);
+        list.add(1);
+        list.add(50);
+        System.out.println(list);
+        Collections.sort(list);// ascending
+        System.out.println(list);
+        // Decending
+        Collections.sort(list , Collections.reverseOrder());
+        System.out.println(list);
+    }
+}
