@@ -1,0 +1,60 @@
+public class LinkedList {
+    public static class Node {
+        int data;
+        Node next;
+
+        public Node (int data){
+            this.data = data;
+            this.next = null;
+        }
+    }
+    public static Node head;
+    public static Node tail;
+
+    public void addFirst (int data) {
+        // Step 1 create new node
+        Node newNode = new Node(data);
+        if(head == null){
+            head = tail = newNode;
+        }
+        
+        // Step 2 new node next = head
+        newNode.next = head ; //link
+        
+        // Step 3 head is newNode
+        head = newNode;
+    }
+
+    public void addLast (int data){
+        // Step 1 is to create node
+        Node newNode = new Node(data);
+        if(head == null){
+            head = tail = newNode;
+            return;
+        }
+        // Step 2 tail next point to the newNode
+        tail.next = newNode;
+
+        // Step 3 newNode is a tail
+        tail = newNode;
+    }
+    public void Print(){
+        if(head==null){
+            System.out.println("LL is empty");
+        }
+        Node temp = head;
+        while(temp!=null){
+            System.out.print(temp.data +" ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
+    public static void main (String args[]){
+       LinkedList ll = new LinkedList();
+       ll.addFirst(2);
+       ll.addFirst(1);
+       ll.addLast(3);
+       ll.addLast(4);
+       ll.Print();
+    }
+}
