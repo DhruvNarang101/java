@@ -1,0 +1,84 @@
+public class CheckLinkedListPalindrome {
+    public static class Node {
+        int data;
+        Node next;
+        
+        public Node (int data){
+            this.data = data;
+            this.next = null;
+        }
+    }
+    public static Node head;
+    public static Node tail;
+    
+    // Add Last
+    public void addLast(int data){
+        // step 1 create new Node
+        Node newNode = new Node(data);
+        if(head==null){
+            head=tail=newNode;
+            return;
+        }
+        // step 2 tail next is point to the newNode
+        tail.next = newNode;
+        // step 3 newNode is a tail
+        tail = newNode;
+    }
+    
+    // Print the LinkedList
+    public void print(){
+        Node temp = head;
+        while(temp!=null){
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+        }
+        System.out.println();
+    }
+    public Node FindMid(Node head){
+        Node slow = head;
+        Node fast = head;
+
+        while(fast!=null && fast.next!=null){
+            slow=slow.next; //+1jump
+            fast=fast.next.next; //+2jump
+        }
+        return slow;
+    }
+    public boolean Palindrome(){
+        if(head==null || head.next == null){
+            return true;
+        }
+        Node mid = FindMid (head);
+        // Reverse the 2nd half
+        Node prev = null;
+        Node curr = mid;
+        Node next;
+        while(curr!=null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr=next;
+        }
+        Node right = prev; // right is the head of the 2nd half
+        Node left = head;
+
+        while(right!=null){
+            if(left.data!= right.data){
+                return false;
+            }
+            right = right.next;
+            left = left.next;
+        }
+        return true;
+    }
+    public static void main (String args[]){
+        CheckLinkedListPalindrome ll = new CheckLinkedListPalindrome();
+        ll.addLast(1);
+        ll.addLast(2);
+        ll.addLast(2);
+        ll.addLast(1);
+        ll.print();
+        System.out.println(ll.Palindrome());
+    }
+}
+       
