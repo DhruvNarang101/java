@@ -1,0 +1,25 @@
+// LinkedList using the Java Collection Framework 
+import java.util.LinkedList;
+public class Main {
+    public static void main (String args[]){
+       
+        // create the Linked List
+        LinkedList <Integer> ll = new LinkedList<>();
+        
+        // Add the LinkedList
+        ll.addLast(3);
+        ll.addLast(4);
+        ll.addLast(5);
+        ll.addFirst(2);
+        ll.addFirst(1);
+        
+        // print the LinkedList
+        System.out.println(ll);
+        
+        // remove the LinkedList
+        ll.removeFirst();
+        ll.removeLast();
+        ll.removeFirst();
+        System.out.println(ll);
+    }
+}
