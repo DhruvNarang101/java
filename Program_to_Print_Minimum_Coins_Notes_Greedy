@@ -1,0 +1,29 @@
+import java.util.*;
+public class IndianCurrency {
+
+    public static void main (String args[]){
+        Integer currency [] = {1,2,5,10,20,50,100,500,2000};
+        Arrays.sort(currency,Comparator.reverseOrder());
+        
+        int currencyofCount = 0;
+        int amount = 1090;
+
+        ArrayList<Integer> list = new ArrayList<>();
+
+        for(int i=0; i<currency.length; i++){
+            if(currency[i] <= amount){
+                while(currency[i] <= amount){
+                    currencyofCount++;
+                    list.add(currency[i]);
+                    amount-= currency[i];
+                }
+            } 
+        }
+        System.out.println("Minimum number of notes/coins :" + currencyofCount); 
+
+        for(int i=0; i<list.size(); i++){
+            System.out.print(list.get(i)+" ");
+        }
+        System.out.println();
+    }
+}
