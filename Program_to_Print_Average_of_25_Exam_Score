@@ -1,0 +1,16 @@
+import java.util.*;
+public class Average25ExamScore {
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        int val = 1;
+        int sum = 0;
+        while(val<=25){
+            System.out.println("Enter the marks of sub "+ val);
+            int score = sc.nextInt();
+            sum = sum+score;
+            val++;
+        }
+        int average = sum/25;
+        System.out.println("Average of marks = "+ average);
+    }
+}
