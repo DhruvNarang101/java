@@ -1,0 +1,42 @@
+import java.util.Comparator;
+import java.util.PriorityQueue;
+public class PriorityQueueObjects {
+
+    static class Student implements Comparable<Student>{
+        String name;
+        int roll_no;
+        int age;
+        String stream;
+        int rank;
+
+        public Student(String name, int roll_no, int age, String stream, int rank){
+            this.name = name;
+            this.roll_no = roll_no;
+            this.age = age;
+            this.stream = stream;
+            this.rank = rank;
+        }
+
+        @Override
+        public int compareTo(Student s){
+            if(this.rank != s.rank){
+            return this.rank - s.rank;
+        }
+        return this.age - s.age;
+    }
+}
+
+    public static void main (String args[]){
+        PriorityQueue<Student> pq = new PriorityQueue<>();
+        pq.add(new Student("Ashu", 1, 21, "Arts", 15));
+        pq.add(new Student("Sahil", 2, 20, "Arts", 4));
+        pq.add(new Student("Shubham", 3, 23, "Arts", 10));
+        pq.add(new Student("Dhurv", 4, 18, "Arts", 1));
+
+        System.out.println(pq);
+        while (!pq.isEmpty()) {
+            System.out.println(pq.peek().name + " -> " + pq.peek().roll_no + " -> " + pq.peek().age + " -> " + pq.peek().stream + " -> " + pq.peek().rank);
+            pq.remove();
+        }
+    }
+}
