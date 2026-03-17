@@ -1,0 +1,87 @@
+import java.util.ArrayList;
+
+public class CreateHeap {
+
+    static class Heap {
+        ArrayList<Integer> arr = new ArrayList<>();
+
+        // Add in the Heap
+        public void add(int data){
+            arr.add(data);
+
+            int childIdx = arr.size()-1;
+            int parentIdx = (childIdx-1) / 2;
+
+            while (arr.get(childIdx) < arr.get(parentIdx) ) {
+                int temp = arr.get(childIdx);
+                arr.set(childIdx, arr.get(parentIdx));
+                arr.set(parentIdx, temp);
+                   
+                childIdx = parentIdx;
+                parentIdx = (childIdx-1) / 2;
+            }
+        }
+
+        // Peek from the heap
+        public int peek(){
+            return arr.get(0);
+        }
+
+        private void heaptify(int i){
+            int minIdx = i;
+            int leftIdx = (2*i)+1;
+            int rightIdx = (2*i)+2;
+
+            if(leftIdx < arr.size() && arr.get(minIdx) > arr.get(leftIdx)){
+                minIdx = leftIdx;
+            }
+
+            if(rightIdx < arr.size() && arr.get(minIdx) > arr.get(rightIdx)){
+                minIdx = rightIdx;
+            }
+
+            if(minIdx != i){
+                int temp = arr.get(i);
+                arr.set(i,arr.get(minIdx));
+                arr.set(minIdx, temp);
+
+                heaptify(minIdx);
+            }
+        }
+
+        // remove from the Heap
+        public int  removeHeap(){
+            int delNum = arr.get(0);
+
+            // Step 1 Swap first and the last
+            int temp = arr.get(0);
+            arr.set(0, arr.get(arr.size()-1));
+            arr.set(arr.size()-1, temp);
+
+            // Step 2 Remove the last element
+            arr.remove(arr.size()-1);
+
+            heaptify(0);
+
+            return delNum;
+        }
+
+        public boolean isEmpty(){
+            return arr.size() == 0;
+        }
+    }
+    public static void main (String args[]){
+        Heap pq = new Heap();
+        pq.add(3);
+        pq.add(4);
+        pq.add(1);
+        pq.add(5);
+       
+
+        while (!pq.isEmpty()) {
+            System.out.println(pq.peek());
+            pq.removeHeap();
+        }
+
+    }
+}
